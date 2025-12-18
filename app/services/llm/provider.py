@@ -118,7 +118,7 @@ def chat(
     agent = create_react_agent(
         llm,
         tools=functions,
-        prompt=AGENT_SYSTEM_PROMPT
+        state_modifier=AGENT_SYSTEM_PROMPT
     )
     result = agent.invoke(
         {"messages": messages},
